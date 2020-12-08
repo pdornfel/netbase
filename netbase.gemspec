@@ -7,8 +7,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Paul Dornfeld"]
   s.email       = 'pdornfel@gmail.com'
   s.files       = Dir['lib/   *.rb'] + Dir['bin/*']
+    # s.files       = ["lib/netbase.rb"]
   s.executables << 'netbase'
-  # s.files       = ["lib/netbase.rb"]
   s.homepage    = 'https://rubygems.org/gems/netbase'
   s.license     = 'MIT'
 
