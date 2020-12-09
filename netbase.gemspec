@@ -1,18 +1,36 @@
-Gem::Specification.new do |s|
-  s.name        = 'netbase'
-  s.version     = '0.0.0'
-  s.date        = '2020-12-07'
-  s.summary     = "Netbase Insight Explorer API"
-  s.description = "A ruby wrapper for this tool from Netbase Quid"
-  s.authors     = ["Paul Dornfeld"]
-  s.email       = 'pdornfel@gmail.com'
-  s.files       = Dir['lib/   *.rb'] + Dir['bin/*']
-    # s.files       = ["lib/netbase.rb"]
-  s.executables << 'netbase'
-  s.homepage    = 'https://rubygems.org/gems/netbase'
-  s.license     = 'MIT'
+# coding: utf-8
+lib = File.expand_path('../lib/', __FILE__)
+$:.unshift lib unless $:.include?(lib)
+require 'netbase/version'
 
-  s.add_development_dependency "rspec"
-  s.add_development_dependency "rspec-nc"
-  s.add_development_dependency "pry"
+Gem::Specification.new do |spec|
+
+  spec.name        = 'netbase'
+
+  spec.version     = "0.0.0"
+  # spec.version     = Netbase::VERSION
+  spec.platform    = Gem::Platform::RUBY
+
+  spec.date        = '2020-12-07'
+  spec.summary     = "A ruby wrapper for this tool from Netbase Quid"
+  spec.description = "Netbase Insight Explorer API. It provides simple methods to handle authorization and to execute HTTP calls."
+  spec.authors     = ["Paul Dornfeld"]
+  spec.email       = 'pdornfel@gmail.com'
+
+  # spec.files       = Dir['lib/   *.rb'] + Dir['bin/*']
+  # spec.files       = ["lib/netbase.rb"]
+  spec.files        = Dir.glob("lib/**/*") + %w(LICENSE.md README.md)
+  spec.require_path = 'lib'
+
+  spec.executables << 'netbase'
+  spec.homepage    = 'https://rubygems.org/gems/netbase'
+  spec.license     = 'MIT'
+
+  spec.add_dependency('httmultiparty')
+  spec.add_dependency('hashie')
+
+  spec.add_development_dependency('bundler')
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "rspec-nc"
+  spec.add_development_dependency "pry"
 end

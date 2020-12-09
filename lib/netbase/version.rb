@@ -1,3 +1,3 @@
-module Recaptcha
+module Netbase
   VERSION = '0.0.0'
 end
