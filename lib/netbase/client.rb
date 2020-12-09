@@ -2,7 +2,7 @@ require 'netbase/version'
 
 module Netbase
   class Client
-    include HTTMultiParty
+    include HTTParty
 
     USER_AGENT            = "Netbase Ruby Wrapper #{Netbase::VERSION}"
 
@@ -23,23 +23,24 @@ module Netbase
       }
     end
 
-    def post(path, body={},  options={})
-      handle_response {
-        self.class.post(*construct_query_arguments(path, options.merge(:body => body), :body))
-      }
-    end
-
-    def put(path, body={},  options={})
-      handle_response {
-        self.class.put(*construct_query_arguments(path, options.merge(:body => body), :body))
-      }
-    end
-
-    def delete(path, query={}, options={})
-      handle_response {
-        self.class.delete(*construct_query_arguments(path, options.merge(:query => query)))
-      }
-    end
+    # later...
+    # def post(path, body={},  options={})
+    #   handle_response {
+    #     self.class.post(*construct_query_arguments(path, options.merge(:body => body), :body))
+    #   }
+    # end
+    #
+    # def put(path, body={},  options={})
+    #   handle_response {
+    #     self.class.put(*construct_query_arguments(path, options.merge(:body => body), :body))
+    #   }
+    # end
+    #
+    # def delete(path, query={}, options={})
+    #   handle_response {
+    #     self.class.delete(*construct_query_arguments(path, options.merge(:query => query)))
+    #   }
+    # end
 
     def username
       @options.username

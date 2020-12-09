@@ -17,8 +17,6 @@ Gem::Specification.new do |spec|
   spec.authors     = ["Paul Dornfeld"]
   spec.email       = 'pdornfel@gmail.com'
 
-  # spec.files       = Dir['lib/   *.rb'] + Dir['bin/*']
-  # spec.files       = ["lib/netbase.rb"]
   spec.files        = Dir.glob("lib/**/*") + %w(LICENSE.md README.md)
   spec.require_path = 'lib'
 
@@ -26,11 +24,11 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://rubygems.org/gems/netbase'
   spec.license     = 'MIT'
 
-  spec.add_dependency('httmultiparty')
-  spec.add_dependency('hashie')
+  spec.add_dependency('httparty', '~> 0.18')
+  spec.add_dependency('hashie', '~> 4.0')
 
-  spec.add_development_dependency('bundler')
-  spec.add_development_dependency "rspec"
-  spec.add_development_dependency "rspec-nc"
-  spec.add_development_dependency "pry"
+  spec.add_development_dependency('bundler', '~> 2')
+  spec.add_development_dependency("rspec", '~> 3.10')
+  spec.add_development_dependency("rspec-nc", '~> 0.3')
+  spec.add_development_dependency("pry", '~> 0.13')
 end
