@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.name        = 'netbase'
 
   spec.version     = "0.0.0"
-  # spec.version     = Netbase::VERSION
+  spec.version     = Netbase::VERSION
   spec.platform    = Gem::Platform::RUBY
 
   spec.date        = '2020-12-07'

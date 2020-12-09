@@ -55,7 +55,7 @@ DEPENDENCIES
   netbase!
   pry
   rake
-  rspec (>= 3)
+  rspec
   rspec-nc
 
 BUNDLED WITH
