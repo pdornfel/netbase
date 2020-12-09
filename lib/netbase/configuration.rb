@@ -22,8 +22,7 @@ module Netbase
   #
   class Configuration
     DEFAULTS = {
-      'api_endpoint' => 'https://api.netbase.com/cb/insight-api/2/',
-      'user_agent' => "Netbase Ruby Wrapper #{Netbase::VERSION}"
+      'api_endpoint' => 'https://api.netbase.com/cb/insight-api/2'
     }.freeze
 
     attr_accessor :username, :password

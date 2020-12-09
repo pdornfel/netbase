@@ -3,9 +3,9 @@ require 'httmultiparty'
 require 'uri'
 
 require 'netbase/client'
-# require 'netbase/array_response_wrapper'
-# require 'netbase/hash_response_wrapper'
-# require 'netbase/response_error'
+require 'netbase/array_response_wrapper'
+require 'netbase/hash_response_wrapper'
+require 'netbase/response_error'
 require 'netbase/version'
 require "netbase/configuration"
 
@@ -14,7 +14,6 @@ module Netbase
   class NetbaseError < StandardError
   end
 
-  # new
   def new(options={})
     Client.new(options)
   end
@@ -31,12 +30,10 @@ module Netbase
   end
   module_function :respond_to_missing?
 
-  #configurations
   def self.configuration
     @configuration ||= Configuration.new
   end
 
-  # Allows easy setting of multiple configuration options. See Configuration for all available options.
   def self.configure
     config = configuration
     yield(config)
