@@ -1,5 +1,5 @@
 require 'hashie'
-require 'httmultiparty'
+require 'httparty'
 require 'uri'
 
 require 'netbase/client'
