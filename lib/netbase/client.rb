@@ -3,6 +3,7 @@ require 'netbase/version'
 module Netbase
   class Client
     include HTTParty
+    disable_rails_query_string_format
 
     USER_AGENT            = "Netbase Ruby Wrapper #{Netbase::VERSION}"
 
